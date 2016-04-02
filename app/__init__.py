@@ -5,11 +5,11 @@ from clarifai.client import ClarifaiApi
 
 app = Flask(__name__)
 
-@app.route('/')
-def home(): #homepage; gotta edit the
+@app.route('/', methods=['GET','POST'])
+def home(): 
     if request.method == 'GET':
         url = request.form['url']
-        return redirect(url_for('tags')
+        return redirect(url_for('tags'))
                         
 @app.route('/tags')
 def tags():

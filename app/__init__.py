@@ -9,6 +9,9 @@ app = Flask(__name__)
 def home(): 
     if request.method == 'GET':
         url = request.form['url']
+        clarifai_api = ClarifaiApi(model='EDITHERE')
+        result = clarifai_api.tag_image_url(#SOMETHING)
+        return(result)    
         return redirect(url_for('tags'))
                         
 @app.route('/tags')

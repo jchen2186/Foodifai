@@ -1,0 +1,29 @@
+    <html>
+        <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        </head>
+        <body>
+
+        <div class="container-fluid">
+
+        	<h1>places</h1>
+        	<center>
+        	<div class="places">
+        		<h2>{{ name }}</h2>
+        		
+        		{{ newAddress }}
+        	</div>
+        	<p></p>
+        	<div class="places">
+        		<h2>{{ name1 }}</h2>
+        		
+        		{{ newAddress1 }}
+        	</div>
+        	</center>
+    	</div>
+
+        </body>
+    </html>

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Add Course</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('course_created') }}" method="post">
+    <dl>
+      <dt>Course:
+      <dd><input type=text name=course>
+      <dd><input type=submit value=Login>
+    </dl>
+  </form>
+{% endblock %}

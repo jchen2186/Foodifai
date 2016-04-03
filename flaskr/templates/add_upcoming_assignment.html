@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Add Upcoming Assignment</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('course_created') }}" method="post">
+    <dl>
+      <dt>Name:</dt>
+      <dd><input type=text name=course></dd>
+      <dt>Type of Course:</dt>
+      <dd><input type=text name=category></dd>
+      <dt>Category:</dt>
+      <dd><input type=text name=category></dd>
+      <dt>Deadline:<p>Format:mm/dd/yyyy</dt>
+    </dl>
+  </form>
+{% endblock %}
